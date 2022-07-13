@@ -25,6 +25,86 @@
   </head>
 
   <body>
+    <div class="app">
+      <div class="navbar"></div>
+
+      <div class="content">
+        <div class="leftSide">
+          <div class="kanbanContainer">
+            <div class="column1">
+              <span>Todo</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="column2">
+              <span>In Progress</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="column3">
+              <span>Review</span>
+              <i class="fas fa-plus"></i>
+            </div>
+            <div class="column4">
+              <span>Complete</span>
+              <i class="fas fa-plus"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="rightSide">
+          <div class="calender"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <form
+      class="modal fade"
+      id="form"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Task Title</p>
+            <input type="text" class="form-control" name="" id="textInput" />
+            <div id="msg"></div>
+            <br />
+            <p>Due Date</p>
+            <input type="date" class="form-control" name="" id="dateInput" />
+            <br />
+            <p>Description</p>
+            <textarea
+              name=""
+              class="form-control"
+              id="textarea"
+              cols="30"
+              rows="5"
+            ></textarea>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="submit" id="add" class="btn btn-primary">Add</button>
+          </div>
+        </div>
+      </div>
+    </form>
     <script src="main.js"></script>
   </body>
 </html>

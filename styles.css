@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #331E36;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 1px solid #41337A;
+  height: 800px;
+  width: 1400px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.navbar {
+  border-bottom: 1px solid #41337A;
+  height: 75px;
+}
+
+.kanbanContainer {
+  /* border: 1px solid #41337A; */
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+  border-radius: 10px;
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.kanbanContainer .column1 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  height: 100%;
+  width: 25%;
+  border-right: 1px solid #41337A;
+}
+
+.kanbanContainer .column2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  height: 100%;
+  width: 25%;
+  border-right: 1px solid #41337A;
+}
+
+.kanbanContainer .column3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  height: 100%;
+  width: 25%;
+  border-right: 1px solid #41337A;
+}
+
+.kanbanContainer .column4 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  height: 100%;
+  width: 25%;
+}
+
+.leftSide {
+  width: 75%;
+
+}
+
+.rightSide {
+
+  border-left: 2px solid #41337A;
+  height: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
