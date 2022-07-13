@@ -32,20 +32,33 @@
         <div class="leftSide">
           <div class="kanbanContainer">
             <div class="column1">
-              <span>Todo</span>
-              <i class="fas fa-plus"></i>
+              <div class="columnHeader">
+                <span>Tasks</span>
+                <i
+                  class="fas fa-plus"
+                  data-bs-toggle="modal"
+                  data-bs-target="#form"
+                ></i>
+              </div>
+              <div id="tasks"></div>
             </div>
             <div class="column2">
-              <span>In Progress</span>
-              <i class="fas fa-plus"></i>
+              <div class="columnHeader">
+                <span>In Progress</span>
+                <i class="fas fa-plus"></i>
+              </div>
             </div>
             <div class="column3">
-              <span>Review</span>
-              <i class="fas fa-plus"></i>
+              <div class="columnHeader">
+                <span>Review</span>
+                <i class="fas fa-plus"></i>
+              </div>
             </div>
             <div class="column4">
-              <span>Complete</span>
-              <i class="fas fa-plus"></i>
+              <div class="columnHeader">
+                <span>Complete</span>
+                <i class="fas fa-plus"></i>
+              </div>
             </div>
           </div>
         </div>
