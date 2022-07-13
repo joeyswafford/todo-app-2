@@ -42,32 +42,60 @@
               </div>
               <div id="tasks"></div>
             </div>
+
             <div class="column2">
               <div class="columnHeader">
                 <span>In Progress</span>
-                <i class="fas fa-plus"></i>
+                <i
+                  class="fas fa-plus"
+                  data-bs-toggle="modal"
+                  data-bs-target="#form"
+                ></i>
               </div>
+              <div id="inProgress"></div>
             </div>
+
             <div class="column3">
               <div class="columnHeader">
                 <span>Review</span>
-                <i class="fas fa-plus"></i>
+                <i
+                  class="fas fa-plus"
+                  data-bs-toggle="modal"
+                  data-bs-target="#form"
+                ></i>
               </div>
+              <div id="review"></div>
             </div>
+
             <div class="column4">
               <div class="columnHeader">
                 <span>Complete</span>
-                <i class="fas fa-plus"></i>
+                <i
+                  class="fas fa-plus"
+                  data-bs-toggle="modal"
+                  data-bs-target="#form"
+                ></i>
               </div>
+              <div id="complete"></div>
             </div>
           </div>
         </div>
 
         <div class="rightSide">
-          <div class="calender"></div>
+          <div class="calender">
+            <!-- Draggable DIV -->
+            <div id="mydiv">
+              <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+              <div id="mydivheader">Click here to move</div>
+              <p>Move</p>
+              <p>this</p>
+              <p>DIV</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <p class="sample"></p>
 
     <!-- Modal -->
     <form
@@ -119,5 +147,6 @@
       </div>
     </form>
     <script src="tasks.js"></script>
+    <script src="drag.js"></script>
   </body>
 </html>
