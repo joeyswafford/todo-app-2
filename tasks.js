@@ -7,6 +7,7 @@ let dateInput = document.getElementById("dateInput");
 let textarea = document.getElementById("textarea");
 let msg = document.getElementById("msg");
 let add = document.getElementById("add");
+let moveBtn = document.getElementById("moveBtn");
 
 // handle form validation first
 let formValidation = () => {
@@ -72,6 +73,7 @@ let createTask = () => {
       <span class="btnOptions">
         <i onClick="editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit"></i>
         <i onClick="deleteTask(this);createTask()" class="fas fa-trash-alt"></i>
+        <i onClick="moveTask()" class="fas fa-arrow-right"></i>
       </span>
     </div>
     `);
@@ -115,3 +117,13 @@ let deleteTask = (e) => {
 
   console.log(data);
 };
+
+// gets cursor coordinates
+let samplePar = document.querySelector(".sample");
+
+document.addEventListener("mousemove", (e) => {
+  samplePar.innerText = `
+    Client X: ${e.clientX}
+    Client Y: ${e.clientY}
+  `;
+});
