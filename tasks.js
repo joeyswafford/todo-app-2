@@ -92,3 +92,26 @@ if (maybeData !== undefined) {
   data = [];
   // ^^^ set data to an empty array since there is no saved data
 }
+
+// READ & UPDATE
+let editTask = (e) => {
+  let selectedTask = e.parentElement.parentElement; // targeting selected task and storing in variable
+
+  textInput.value = selectedTask.children[0].innerHTML; // targeting task value
+  dateInput.value = selectedTask.children[1].innerHTML; // targeting date value
+  textarea.value = selectedTask.children[2].innerHTML; // targeting description value
+
+  deleteTask(e); // using the delete function to remove selected data from local storage, HTML element, and the data array
+};
+
+// DELETE
+
+let deleteTask = (e) => {
+  e.parentElement.parentElement.remove(); // deletes selected html from screen
+
+  data.splice(e.parentElement.parentElement.id, 1); // deletes targeted task from data array
+
+  localStorage.setItem("data", JSON.stringify(data)); // updates local storage with new data
+
+  console.log(data);
+};
