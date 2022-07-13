@@ -86,21 +86,26 @@ body {
 #tasks {
   display: grid;
   grid-template-columns: 1fr;
-  margin: 25px 10px 0 10px;
+  margin: 35px 10px 0 10px;
   gap: 15px;
   padding-bottom: 10px;
-
 }
 
 #tasks div {
+  cursor: pointer;
   border-radius: 10px;
-  border: 1px solid #ECFEE8;
-  background-color: #41337A;
+  border: 1px solid #331E36;
+  background-color: #5d4672;
   opacity: 0.8;
   display: grid;
   gap: 5px;
   padding: 5px;
+  transition: .2s all ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#tasks div:hover {
+  transform: scale(1.1);
 }
 
 #tasks div p {
