@@ -17,6 +17,15 @@ let formValidation = () => {
   } else {
     console.log("success");
     msg.innerHTML = "";
+
+    acceptData();
+    // should dismiss form after accepting the data
+    add.setAttribute("data-bs-dismiss", "modal");
+    add.click();
+
+    (() => {
+      add.setAttribute("data-bs-dismiss", "");
+    })();
   }
 };
 
@@ -25,3 +34,27 @@ form.addEventListener("submit", (e) => {
 
   formValidation();
 });
+
+// collect user data and save to local storage
+let data = [];
+
+let acceptData = () => {
+  data.push({
+    text: textInput.value,
+    date: dateInput.value,
+    description: textarea.value,
+  });
+
+  localStorage.setItem("data", JSON.stringify(data));
+  console.log(data);
+
+  // createTask();
+};
+
+// should reset form after submitting
+
+let forReset = () => {
+  textInput.value = "";
+  dateInput.value = "";
+  textarea.value = "";
+};
