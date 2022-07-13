@@ -12,6 +12,7 @@ body {
 .app {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   border-radius: 20px;
   border: 1px solid #41337A;
   height: 800px;
@@ -41,6 +42,7 @@ body {
   height: 100%;
   width: 25%;
   border-right: 1px solid #41337A;
+  overflow-y: scroll;
 }
 
 .kanbanContainer .column2 {
@@ -84,8 +86,48 @@ body {
 #tasks {
   display: grid;
   grid-template-columns: 1fr;
+  margin: 25px 10px 0 10px;
   gap: 15px;
   padding-bottom: 10px;
+
+}
+
+#tasks div {
+  border-radius: 10px;
+  border: 1px solid #ECFEE8;
+  background-color: #41337A;
+  opacity: 0.8;
+  display: grid;
+  gap: 5px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#tasks div p {
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+#tasks div .btnOptions {
+  display: flex;
+  justify-self: center;
+  gap: 15px;
+  font-size: 16px;
+
+}
+
+#tasks div .btnOptions i {
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+}
+
+#tasks div .btnOptions i:hover {
+  transform: scale(1.5);
+}
+
+.date {
+  margin-top: -10px;
 }
 
 .leftSide {
@@ -103,4 +145,16 @@ body {
   display: flex;
   flex-direction: row;
   height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #331E36;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #41337A;
 }

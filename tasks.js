@@ -48,13 +48,47 @@ let acceptData = () => {
   localStorage.setItem("data", JSON.stringify(data));
   console.log(data);
 
-  // createTask();
+  createTask();
 };
 
 // should reset form after submitting
-
-let forReset = () => {
+let formReset = () => {
   textInput.value = "";
   dateInput.value = "";
   textarea.value = "";
 };
+
+// CREATE
+let createTask = () => {
+  // initialize tasks div as empty
+  tasks.innerHTML = "";
+  data.map((x, y) => {
+    return (tasks.innerHTML += `
+    <div id=${y}>
+      <h5 class="fw-bold">${x.text}</h5>
+      <span class="small text-secondary date">${x.date}</span>
+      <p>${x.description}</p>
+
+      <span class="btnOptions">
+        <i onClick="editTask(this)" data-bs-toggle="modal" data-bs-target="#form" class="fas fa-edit"></i>
+        <i onClick="deleteTask(this);createTask()" class="fas fa-trash-alt"></i>
+      </span>
+    </div>
+    `);
+  });
+  formReset();
+};
+
+// allow data to persist on page load
+const savedData = localStorage.getItem("data");
+//  ^^^ if "data" does not exist in local storage, then this will be undefined
+const maybeData = JSON.parse(savedData);
+// ^^^ this could be the data object or undefined
+if (maybeData !== undefined) {
+  data = maybeData;
+  console.log(data);
+  createTask();
+} else {
+  data = [];
+  // ^^^ set data to an empty array since there is no saved data
+}
